@@ -1,13 +1,7 @@
 {
-  "itemGroup.witheraway": "Example Mod Tab",
-  "block.witheraway.example_block": "Example Block",
-  "item.witheraway.example_item": "Example Item",
-
   "witheraway.configuration.title": "Wither Away Configs",
   "witheraway.configuration.section.witheraway.common.toml": "Wither Away Configs",
   "witheraway.configuration.section.witheraway.common.toml.title": "Wither Away Configs",
-  "witheraway.configuration.items": "Item List",
-  "witheraway.configuration.logDirtBlock": "Log Dirt Block",
-  "witheraway.configuration.magicNumberIntroduction": "Magic Number Text",
-  "witheraway.configuration.magicNumber": "Magic Number"
+  "witheraway.configuration.disableWitherBossbar": "Disable Wither Boss Bar",
+  "witheraway.configuration.disableWitherDarkening": "Disable Wither Screen Darkening"
 }
