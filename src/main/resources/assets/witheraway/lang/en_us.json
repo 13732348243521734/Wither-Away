@@ -3,5 +3,6 @@
   "witheraway.configuration.section.witheraway.common.toml": "Wither Away Configs",
   "witheraway.configuration.section.witheraway.common.toml.title": "Wither Away Configs",
   "witheraway.configuration.disableWitherBossbar": "Disable Wither Boss Bar",
-  "witheraway.configuration.disableWitherDarkening": "Disable Wither Screen Darkening"
+  "witheraway.configuration.disableWitherDarkening": "Disable Wither Screen Darkening",
+  "witheraway.configuration.muteWitherSpawnExplosion": "Mute Wither Spawn Explosion Sound"
 }

@@ -1,6 +1,7 @@
 package com.tweak.witheraway.mixin;
 
 import com.tweak.witheraway.Config;
+import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EntityType;
@@ -46,6 +47,16 @@ public class WitherBossMixin {
     private void witheraway$redirectRemovePlayer(ServerBossEvent bossEvent, ServerPlayer player) {
         if (!Config.DISABLE_WITHER_BOSSBAR.getAsBoolean()) {
             bossEvent.removePlayer(player);
+        }
+    }
+
+    @Redirect(
+        method = "customServerAiStep",
+        at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;globalLevelEvent(ILnet/minecraft/core/BlockPos;I)V")
+    )
+    private void witheraway$redirectSpawnSound(Level level, int type, BlockPos pos, int data) {
+        if (!Config.MUTE_WITHER_SPAWN_EXPLOSION.getAsBoolean()) {
+            level.globalLevelEvent(type, pos, data);
         }
     }
 }
