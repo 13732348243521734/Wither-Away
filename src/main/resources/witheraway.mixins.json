@@ -3,7 +3,8 @@
   "package": "com.tweak.witheraway.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "WitherBossMixin"
+    "WitherBossMixin",
+    "WitherSkullMixin"
   ],
   "injectors": {
     "defaultRequire": 1

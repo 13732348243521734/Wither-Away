@@ -1,8 +1,12 @@
 {
-  "witheraway.configuration.title": "Wither Away Configs",
   "witheraway.configuration.section.witheraway.common.toml": "Wither Away Configs",
   "witheraway.configuration.section.witheraway.common.toml.title": "Wither Away Configs",
   "witheraway.configuration.disableWitherBossbar": "Disable Wither Boss Bar",
+  "witheraway.configuration.disableWitherBossbar.tooltip": "If enabled, the purple boss bar at the top of the screen will not be shown for Withers.",
   "witheraway.configuration.disableWitherDarkening": "Disable Wither Screen Darkening",
-  "witheraway.configuration.muteWitherSpawnExplosion": "Mute Wither Spawn Explosion Sound"
+  "witheraway.configuration.disableWitherDarkening.tooltip": "If enabled, the sky and screen will not darken when a Wither is nearby.",
+  "witheraway.configuration.muteWitherSpawnSound": "Mute Global Spawn Screech",
+  "witheraway.configuration.muteWitherSpawnSound.tooltip": "Mutes the world-wide sound played when a Wither is summoned.",
+  "witheraway.configuration.muteAllOtherWitherSounds": "Mute All Other Wither Sounds",
+  "witheraway.configuration.muteAllOtherWitherSounds.tooltip": "Mutes ambient, hurt, and death sounds, as well as all Wither-specific explosions (including the spawn explosion and skull impacts)."
 }

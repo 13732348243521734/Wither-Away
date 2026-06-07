@@ -1,0 +1,12 @@
+{
+  "witheraway.configuration.section.witheraway.common.toml": "Wither Away Konfiguration",
+  "witheraway.configuration.section.witheraway.common.toml.title": "Wither Away Konfiguration",
+  "witheraway.configuration.disableWitherBossbar": "Wither Boss-Leiste deaktivieren",
+  "witheraway.configuration.disableWitherBossbar.tooltip": "Wenn aktiviert, wird die lila Boss-Leiste am oberen Bildschirmrand für Wither nicht mehr angezeigt.",
+  "witheraway.configuration.disableWitherDarkening": "Bildschirmverdunkelung deaktivieren",
+  "witheraway.configuration.disableWitherDarkening.tooltip": "Wenn aktiviert, verdunkeln sich der Himmel und der Bildschirm nicht mehr, wenn ein Wither in der Nähe ist.",
+  "witheraway.configuration.muteWitherSpawnSound": "Globales Spawn-Geräusch stummschalten",
+  "witheraway.configuration.muteWitherSpawnSound.tooltip": "Schaltet das weltweite Kreischen stumm, das beim Beschwören eines Withers ertönt.",
+  "witheraway.configuration.muteAllOtherWitherSounds": "Alle anderen Wither-Geräusche stummschalten",
+  "witheraway.configuration.muteAllOtherWitherSounds.tooltip": "Schaltet Umgebungs-, Verletzungs- und Todesgeräusche sowie alle Wither-spezifischen Explosionen stumm (einschließlich der Spawn-Explosion und Schädeleinschläge)."
+}
