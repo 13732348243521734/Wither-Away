@@ -66,15 +66,19 @@ public class WitherBossMixin {
 
     @Redirect(
         method = "customServerAiStep",
-        at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;explode(Lnet/minecraft/world/entity/Entity;DDDFZLnet/minecraft/world/level/Level$ExplosionInteraction;)Lnet/minecraft/world/level/Explosion;")
+        at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;explode(Lnet/minecraft/world/entity/Entity;DDDFZLnet/minecraft/world/level/Level$ExplosionInteraction;)V")
     )
-    private net.minecraft.world.level.Explosion witheraway$redirectSpawnExplosion(Level level, net.minecraft.world.entity.Entity entity, double x, double y, double z, float radius, boolean fire, ExplosionInteraction interaction) {
+    private void witheraway$redirectSpawnExplosion(Level level, net.minecraft.world.entity.Entity entity, double x, double y, double z, float radius, boolean fire, ExplosionInteraction interaction) {
         if (Config.MUTE_ALL_OTHER_WITHER_SOUNDS.getAsBoolean()) {
-            if (level instanceof net.minecraft.server.level.ServerLevel serverLevel) {
-                return serverLevel.explode(entity, null, null, x, y, z, radius, fire, interaction, false, net.minecraft.core.particles.ParticleTypes.EXPLOSION, net.minecraft.core.particles.ParticleTypes.EXPLOSION_EMITTER, net.minecraft.sounds.SoundEvents.GENERIC_EXPLODE);
+            LevelMixin.witheraway$setMuting(true);
+            try {
+                level.explode(entity, x, y, z, radius, fire, interaction);
+            } finally {
+                LevelMixin.witheraway$setMuting(false);
             }
+        } else {
+            level.explode(entity, x, y, z, radius, fire, interaction);
         }
-        return level.explode(entity, x, y, z, radius, fire, interaction);
     }
 
     @Redirect(
